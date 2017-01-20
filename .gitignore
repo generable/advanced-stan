@@ -30,3 +30,8 @@
 
 # Emacs
 *~
+*.hpp
+
+# Mac
+.DS_Store
+
