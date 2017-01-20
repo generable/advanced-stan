@@ -1,3 +1,22 @@
+data {
+  real y[100];
+  real<lower = 0> sigma;
+}
+parameters {
+  real log_mu;
+}
+transformed parameters {
+  real mu = exp(mu);
+}
+model {
+  y ~ normal(mu, sigma);
+  
+  increment_log_prob(normal_log(y, mu, sigma));
+  
+  target += normal_lpdf(mu | y, sigma);
+}
+
+
 # Get RStan
 
 ```sh

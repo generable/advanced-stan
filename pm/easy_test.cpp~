@@ -1,0 +1,6 @@
+#include <stan/math.hpp>
+#include <gtest/gtest.h>
+
+TEST(easy, test) {
+  EXPECT_FLOAT_EQ(2, 1 + 1);
+}
